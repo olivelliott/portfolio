@@ -1,11 +1,11 @@
 :root {
     --background-color:  #f4f4f4;
-    --secondary-color: rgba(0,0,0,0.75);
+    --secondary-color: rgba(0,0,0,0.6);
     --text-shadow: rgba(0, 0, 0, 0.75);
-    --hover-color: #806a7a ;
+    --hover-color:  #b4a1b1;
 }
 /* ! Backup colors
-#b4a1b1; 
+#b4a1b1;
 #806a7a */
 
 *{
@@ -22,7 +22,7 @@ body {
 
 h2 {
     padding: 0 0 30px 0;
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--hover-color);
     margin-bottom: 15px;
     font-style: oblique;
     font-size: 200%;
@@ -122,35 +122,26 @@ section {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.4;
+    opacity: 0.25;
 }
 
 #hero-section {
     text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    text-shadow: var(--text-shadow);
 }
 
 #bio {
-    background-color: rgba(0, 0, 0, 0.4);
-    margin: 20px;
+    background-color: var(--secondary-color);
     text-align: center;
+    padding: 30px;
 }
 
-#bio img {
-    height: 320px;
-    width: 220px;
+#bio-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding-bottom: 20px;
-}
-
-#bio  article {
-    padding-top: 30px;
-}
-
-#bio p {
-    line-height: 1.3;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px 15px 30px 15px;
 }
 
 #projects {
@@ -263,6 +254,18 @@ section {
     padding: 5px 0;
     font-size: 16px;
 }
+/* ! outline for img */
+/*
+#contact-info img {
+    height: 320px;
+    width: 220px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-end;
+    margin: auto;
+    padding-bottom: 20px;
+}
+ */
 
 /* ! To go into the web display section
 #fan-page:hover {
