@@ -219,8 +219,8 @@ section {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.contact-info h2 {
-    border-bottom: 1px solid white;
+.contact-info img {
+    padding-bottom: 20px;
 }
 
 .contact-info form {
@@ -252,6 +252,24 @@ section {
     padding: 5px 0;
     font-size: 16px;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        flex: 1;
+    }
+
+    #bio-content {
+        align-items: center;
+    }
+
+    #projects div {
+        padding: 60px;
+        margin: 10px auto;
+        border-style: none;
+    }
+}
+
+
 /* ! outline for img */
 /*
 #contact-info img {
