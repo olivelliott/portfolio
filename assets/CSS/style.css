@@ -16,7 +16,7 @@
 
 body {
     background-color: var(--background-color);
-    font-family: "Tahoma, Helvetica, Arial, sans-serif";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
 
@@ -28,6 +28,10 @@ h2 {
     text-align: center;
     position: relative;
     opacity: 1;
+}
+
+p, h3 {
+    background-color: rgba(39, 37, 37, 0.5);
 }
 
 header {
@@ -42,6 +46,7 @@ header {
     top: 0;
     z-index: 9999;
     flex-wrap: wrap;
+    flex: 1;
 }
 
 header h1 {
@@ -70,6 +75,7 @@ header nav ul {
 header nav ul li a {
     padding: 12px;
     text-decoration: none;
+    font-style: normal;
     color: white;
     font-size: 115%;
     font-weight: light;
@@ -128,17 +134,17 @@ section {
 #bio {
     background-color: var(--secondary-color);
     text-align: center;
-    padding: 30px;
-}
-
-#bio-content {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 30px 15px 30px 15px;
+    padding: 40px 15px 40px 15px;
 }
 
-#projects {
+#bio p {
+}
+
+
+.projects {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -146,70 +152,107 @@ section {
     padding: 20px;
 }
 
-#projects h2 {
+.projects h2 {
     margin-top: 20px;
 }
 
-#projects h3 {
+.projects h3 {
     font-size: 150%;
     text-shadow: var(--text-shadow);
 }
 
-#projects h3, p {
+.projects  h3 , p  {
     position: relative;
     display: flex;
+    justify-content: flex-end;
+    color: white;
+    padding: 5px 20px;
 }
 
-#projects div {
+.projects div {
     display: flex;
     flex-wrap: wrap;
     padding: 40px;
     width: 100%;
-    border: 2px solid var(--secondary-color);
     justify-content: space-between;
     margin: 20px auto;
+    flex-direction: column;
 }
 
-#fan-page  {
+#fan-page {
     background-size: cover;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+
 }
 
 #fan-page::before {
     content: "";
-    background-image: url("../images/fan-page.png");
     background-size: cover;
+    background-image: url(../images/fan-page.png);
     position: absolute;
     top: 0px;
+    left: 0px;
     right: 0px;
     bottom: 0px;
-    left: 0px;
-    opacity: 0.5;
+    opacity: 0.45;
+}
+
+#fan-page h3, p {
 }
 
 #run-buddy {
     background-size: cover;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
 }
 
 #run-buddy::before {
     content: "";
     background-size: cover;
-    background-image: url("../images/run-buddy.png");
+    background-image: url(../images/run-buddy.png);
     position: absolute;
     top: 0px;
+    left: 0px;
     right: 0px;
     bottom: 0px;
+    opacity: 0.45;
+}
+
+#project-3 {
+    background-size: cover;
+    position: relative;
+    display: flex;
+}
+
+#project-3::before {
+    content: "";
+    background-size: cover;
+    background-image: url("https://via.placeholder.com/150");
+    position: absolute;
+    top: 0px;
     left: 0px;
-    opacity: 0.5;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.45;
+}
+
+#project-4 {
+    background-size: cover;
+    position: relative;
+    display: flex;
+}
+
+#project-4::before {
+    content: "";
+    background-size: cover;
+    background-image: url("https://via.placeholder.com/150");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.45;
 }
 
 .contact-info {
@@ -253,7 +296,7 @@ section {
     font-size: 16px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     header {
         flex: 1;
     }
