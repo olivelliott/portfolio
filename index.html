@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./assets/CSS/style.css" />
         <title>Olivia Elliott</title>
@@ -50,43 +51,44 @@
                     </div>
                 </article>
             </section>
-            <section class="projects">
-                <h2>My Projects</h2>
+            <div class="projects">
+                <section id="projects">
+                    <h2>My Projects</h2>
+                    <div class="hover" id="fan-page">
+                        <h3>Fan Page</h3>
+                        <p>HTML  | CSS </p>
+                    </div>
 
-                <div id="fan-page">
-                    <h3>Fan Page</h3>
-                    <p>HTML  | CSS </p>
-                </div>
+                    <div class="hover" id="run-buddy">
+                        <h3>Run Buddy</h3>
+                        <p>HTML  | CSS</p>
+                    </div>
 
-                <div id="run-buddy">
-                    <h3>Run Buddy</h3>
-                    <p>HTML  | CSS</p>
-                </div>
+                    <div class="hover" id="project-3">
+                        <h3>Project 3</h3>
+                        <p>HTML | CSS | JAVASCRIPT</p>
+                    </div>
 
-                <div id="project-3">
-                    <h3>Project 3</h3>
-                    <p>HTML | CSS | JAVASCRIPT</p>
-                </div>
-
-                <div id="project-4">
-                    <h3>Project 4</h3>
-                    <p>HTML | CSS | JAVASCRIPT</p>
-                </div>
-            </section>
-
+                    <div class="hover" id="project-4">
+                        <h3>Project 4</h3>
+                        <p>HTML | CSS | JAVASCRIPT</p>
+                    </div>
+                </section>
+            </div>
+            <div class="contact-info-content">
             <section class="contact-info">
                     <img src="./assets/images/me2.jpg" alt="image of Olivia Elliott" />
-                    <h2 id="contact">Let's get connected</h2>
-                    <form>
-                        <label for="name" >Name:</label>
-                        <input type="text" name="name" placeholder="Your Name" id="name" />
-                        <label for="message" >Message:</label>
-                        <input type="text" name="message" placeholder="Message" id="message" />
-                        <button type="submit">Submit</button>
-                    </form>
+                    <div id="contact">
+                        <h2>Let's get connected!</h2>
+                        <form>
+                            <label for="name" >Name:</label>
+                            <input type="text" name="name" placeholder="Your Name" id="name" />
+                            <label for="message" >Message:</label>
+                            <input type="text" name="message" placeholder="Message" id="message" />
+                            <button class="hover" type="submit">Submit</button>
+                        </form>
+                    </div>
             </section>
-        <footer>
-            <h4>Created by Olivia Elliott</h4>
-        </footer>
+            </div>
     </body>
 </html>

@@ -4,9 +4,6 @@
     --text-shadow: rgba(0, 0, 0, 0.75);
     --hover-color:  #b4a1b1;
 }
-/* ! Backup colors
-#b4a1b1;
-#806a7a */
 
 *{
     box-sizing: border-box;
@@ -34,6 +31,10 @@ p, h3 {
     background-color: rgba(39, 37, 37, 0.5);
 }
 
+.hover:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
 header {
     display: flex;
     justify-content: center;
@@ -53,7 +54,7 @@ header h1 {
     font-style: oblique;
     opacity: 0.5;
     padding-bottom: 12px;
-    text-shadow: 0 0 10px  ;
+    text-shadow: 0 0 10px;
     display: flex;
     text-align:  center;
 }
@@ -131,6 +132,10 @@ section {
     text-shadow: var(--text-shadow);
 }
 
+#hero-section p {
+    font-size: 16px;
+}
+
 #bio {
     background-color: var(--secondary-color);
     text-align: center;
@@ -140,7 +145,12 @@ section {
     padding: 40px 15px 40px 15px;
 }
 
+#bio-content p {
+    font-size: 16px;
+}
+
 #bio p {
+    background-color: #0000;
 }
 
 
@@ -183,7 +193,6 @@ section {
     background-size: cover;
     position: relative;
     display: flex;
-
 }
 
 #fan-page::before {
@@ -196,9 +205,6 @@ section {
     right: 0px;
     bottom: 0px;
     opacity: 0.45;
-}
-
-#fan-page h3, p {
 }
 
 #run-buddy {
@@ -260,10 +266,13 @@ section {
     flex-direction: column;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
 }
 
 .contact-info img {
     padding-bottom: 20px;
+    height: 50%;
+    width: 50%;
 }
 
 .contact-info form {
@@ -282,15 +291,15 @@ section {
     margin-bottom: 15px;
     margin-top: 5px;
     background-color: rgba(255, 255, 255, 0.75);
-
+    border-radius: 15px;
 }
 
 .contact-info button {
     width: 50%;
     border: none;
     border-radius: 10px;
-    background: var(--background-color);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: var(--secondary-color);
     text-align: center;
     padding: 5px 0;
     font-size: 16px;
@@ -299,10 +308,13 @@ section {
 @media screen and (min-width: 768px) {
     header {
         flex: 1;
+        justify-content: space-between;
     }
 
     #bio-content {
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #projects div {
@@ -310,8 +322,65 @@ section {
         margin: 10px auto;
         border-style: none;
     }
+
+    #contact h2 {
+        font-size: 100%;
+    }
+
+    #contact-info-form {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 60px 30px 10px;
+    }
+
+    .contact-info-content {
+        display: flex;
+        justify-content: center;
+        height: 50%;
+    }
+
+    .contact-info img {
+        width: 35%;
+        height: 90%;
+    }
+
+    #contact {
+        font-size: 150%;
+        flex-grow: 0.5;
+    }
 }
 
+@media screen and (min-width: 980px) {
+    .header-hero-img {
+        padding-bottom: 60px;
+    }
+
+    #hero-section {
+        padding-bottom: 60px;
+    }
+
+    #hero-section p {
+        font-size: 20px;
+    }
+
+    #bio {
+        padding-bottom: 60px;
+    }
+    #bio p {
+        font-size: 20px;
+    }
+
+    .contact-info {
+        justify-content: space-around;
+    }
+}
 
 /* ! outline for img */
 /*
@@ -324,10 +393,3 @@ section {
     margin: auto;
     padding-bottom: 20px;
 }
- */
-
-/* ! To go into the web display section
-#fan-page:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-*/
