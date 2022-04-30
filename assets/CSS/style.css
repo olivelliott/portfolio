@@ -189,6 +189,10 @@ section {
     flex-direction: column;
 }
 
+.projects a {
+    text-decoration: none;
+}
+
 #fan-page {
     background-size: cover;
     position: relative;
