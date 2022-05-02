@@ -197,6 +197,7 @@ section {
     background-size: cover;
     position: relative;
     display: flex;
+    height: 400px;
 }
 
 #fan-page::before {
