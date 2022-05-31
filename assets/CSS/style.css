@@ -1,7 +1,7 @@
 :root {
-    --background-color:  #f4f4f4;
+    /* --background-color:  #f4f4f4; */
     --secondary-color: rgba(0,0,0,0.6);
-    --text-shadow: rgba(0, 0, 0, 0.75);
+    --text-shadow: rgba(0, 0, 0, 0.5);
     --hover-color:  #b4a1b1;
 }
 
@@ -9,17 +9,26 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
+    text-transform: uppercase;
 }
 
 body {
-    background-color: var(--background-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%); */
+    font-family: 'Montserrat', sans-serif;
     color: white;
+    background: radial-gradient(
+        circle closest-corner at center 500px,
+        #222,
+        black 85%
+      ) no-repeat;
+      text-align: center;    
+
 }
 
 h2 {
     padding: 0 0 30px 0;
-    border-bottom: 3px solid var(--hover-color);
+    border-bottom: 3px solid white;
     margin-bottom: 15px;
     font-size: 200%;
     text-align: center;
@@ -27,23 +36,26 @@ h2 {
     opacity: 1;
 }
 
-p, h3 {
-    background-color: rgba(39, 37, 37, 0.5);
+a {
+    text-decoration: none;
 }
+
+/* p, h3 { */
+    /* background-color: rgba(39, 37, 37, 0.5); */
+/* } */
 
 .hover:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
 
 header {
-    display: flex;
-    justify-content: center;
-    background-color: var(--secondary-color);
-    background-size: cover;
+    /* display: flex;
+    justify-content: center; */
+    /* background-color: var(--secondary-color); */
+    /* background-size: cover;
     background-attachment: fixed;
-    background-position: top;
+    background-position: top; */
     padding: 20px;
-    color: white;
     top: 0;
     z-index: 9999;
     flex-wrap: wrap;
@@ -76,23 +88,81 @@ header nav ul {
 header nav ul li a {
     padding: 12px;
     text-decoration: none;
-    font-style: normal;
-    color: white;
     font-size: 115%;
-    font-weight: light;
-    text-shadow: var(--text-shadow);
 }
 
-header nav ul li a:hover {
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    /* background: #111; */
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-decoration: none;
+
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* header nav ul li a:hover {
     background-color:  var(--hover-color);
     border-radius: 15px;
-}
+    text-decoration: none;
+} */
 
 footer {
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
     display: flex;
     padding: 10px 20px;
-    color: white;
     opacity: 0.5;
     bottom: 0;
     font-style: oblique;
@@ -102,7 +172,7 @@ section {
     padding: 60px;
 }
 
-.header-hero-img {
+/* .header-hero-img {
     background-size: cover;
     position: relative;
     font-style: oblique;
@@ -111,32 +181,43 @@ section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: center; */
+/* } */
 
-.header-hero-img::before {
-    content: "";
-    background-image: url("https://media.istockphoto.com/photos/leaves-skeleton-background-picture-id637444690?k=20&m=637444690&s=612x612&w=0&h=K0-gVqAf8kZi7CskvFnBUx-Oo60xUfy4oh7aCxZ5jW0=");
-    background-size: cover;
-    position: absolute;
+/* .header-hero-img::before {
+    content: ""; */
+    /* background-image: url("https://media.istockphoto.com/photos/leaves-skeleton-background-picture-id637444690?k=20&m=637444690&s=612x612&w=0&h=K0-gVqAf8kZi7CskvFnBUx-Oo60xUfy4oh7aCxZ5jW0=");
+    background-size: cover; */
+    /* position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     opacity: 0.25;
-}
+} */
 
+/* #hero {
+    background: radial-gradient(
+        circle closest-corner at center 125px,
+        #222,
+        black 85%
+      ) no-repeat;
+      text-align: center;    
+
+} */
 #hero-section {
     text-align: center;
     color: rgba(0, 0, 0, 0.4);
-    text-shadow: var(--text-shadow);
+    /* text-shadow: var(--text-shadow); */
 }
 
 #hero-section p {
     font-size: 16px;
+    /* background-color: #0000; */
+    
 }
 
-#bio {
+/* #bio {
     background-color: var(--secondary-color);
     text-align: center;
     display: flex;
@@ -151,7 +232,7 @@ section {
 
 #bio p {
     background-color: #0000;
-}
+} */
 
 
 .projects {
@@ -175,7 +256,6 @@ section {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    color: white;
     padding: 5px 20px;
 }
 
@@ -270,7 +350,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.4);
+    /* background-color: rgba(0, 0, 0, 0.4); */
     align-items: center;
 }
 
@@ -295,7 +375,7 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
-    background-color: rgba(255, 255, 255, 0.75);
+    /* background-color: rgba(255, 255, 255, 0.75); */
     border-radius: 15px;
 }
 
@@ -303,7 +383,7 @@ section {
     width: 50%;
     border: none;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(0, 0, 0, 0.15); */
     color: var(--secondary-color);
     text-align: center;
     padding: 5px 0;
@@ -341,7 +421,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.4);
+    /* background-color: rgba(0, 0, 0, 0.4); */
     padding: 60px 30px 10px;
     }
 
