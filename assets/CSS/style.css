@@ -18,8 +18,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
     background: radial-gradient(
-        circle closest-corner at center 500px,
-        #222,
+        circle farthest-corner at center center,
+        #434343,
         black 85%
       ) no-repeat;
       text-align: center;    
@@ -40,12 +40,13 @@ a {
     text-decoration: none;
 }
 
-/* p, h3 { */
-    /* background-color: rgba(39, 37, 37, 0.5); */
-/* } */
+/* p, h3 {
+    text-decoration: none;
+} */
 
 .hover:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
     }
 
 header {
@@ -102,8 +103,6 @@ header nav ul li a {
     position: relative;
     z-index: 0;
     border-radius: 10px;
-    text-decoration: none;
-
 }
 
 .glow-on-hover:before {
@@ -133,6 +132,11 @@ header nav ul li a {
 
 .glow-on-hover:hover:before {
     opacity: 1;
+}
+
+.glow-on-hover:hover {
+    text-decoration: none;
+    color: white;
 }
 
 .glow-on-hover:after {
@@ -165,7 +169,6 @@ footer {
     padding: 10px 20px;
     opacity: 0.5;
     bottom: 0;
-    font-style: oblique;
 }
 
 section {
@@ -208,11 +211,21 @@ section {
 #hero-section {
     text-align: center;
     color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-around;
     /* text-shadow: var(--text-shadow); */
 }
 
 #hero-section p {
-    font-size: 16px;
+    background: radial-gradient(
+    circle 500px,
+    #ccc,
+    #333
+  ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    width: 66%;
+    
     /* background-color: #0000; */
     
 }
@@ -235,7 +248,7 @@ section {
 } */
 
 
-.projects {
+/* .projects {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -271,16 +284,22 @@ section {
 
 .projects a {
     text-decoration: none;
+} */
+
+#project-board {
+    text-decoration: none;
 }
 
 #fan-page {
-    background-size: cover;
+    /* background-size: cover;
     position: relative;
     display: flex;
-    height: 400px;
+    height: 400px; */
+    /* background-image: url(../images/fan-page.png); */
+    background: radial-gradient(#93a5cf, #e4efe9);
 }
 
-#fan-page::before {
+/* #fan-page::before {
     content: "";
     background-size: cover;
     background-image: url(../images/fan-page.png);
@@ -290,6 +309,15 @@ section {
     right: 0px;
     bottom: 0px;
     opacity: 0.45;
+} */
+
+#fan-page:hover {
+    background-image: url(../images/billy-joel.gif);
+    background-size: cover;
+}
+
+#fan-page:hover h3, p {
+    text-decoration: none;
 }
 
 #run-buddy {
