@@ -64,7 +64,6 @@ header {
 }
 
 header h1 {
-    font-style: oblique;
     opacity: 0.5;
     padding-bottom: 12px;
     text-shadow: 0 0 10px;
@@ -149,6 +148,7 @@ header nav ul li a {
     left: 0;
     top: 0;
     border-radius: 10px;
+    /* background: transparent; */
 }
 
 @keyframes glowing {
@@ -286,23 +286,45 @@ section {
     text-decoration: none;
 } */
 
-#project-board {
+#ez-stream {
+    background: radial-gradient(#93a5cf, #e4efe9);
+}
+
+#ez-stream:hover {
+    background-image: url(../images/ez-stream.gif);
+    background-size: cover;
+}
+
+#ez-stream:hover a{
     text-decoration: none;
 }
 
 #fan-page {
-    /* background-size: cover;
-    position: relative;
-    display: flex;
-    height: 400px; */
-    /* background-image: url(../images/fan-page.png); */
     background: radial-gradient(#93a5cf, #e4efe9);
 }
 
-/* #fan-page::before {
+#fan-page:hover {
+    background-image: url(../images/billy-joel.gif);
+    background-size: cover;
+}
+
+#fan-page:hover a {
+    text-decoration: none;
+    /*  * This works but it shrinks the card */
+    /* display: none; */
+}
+
+#work-day-scheduler {
+    background: radial-gradient(#93a5cf, #e4efe9);
+    background-size: cover;
+    /* position: relative; */
+    font-size: smaller;
+}
+
+/* #work-day-scheduler::before {
     content: "";
     background-size: cover;
-    background-image: url(../images/fan-page.png);
+    background-image: url(../images/work-day-scheduler.png);
     position: absolute;
     top: 0px;
     left: 0px;
@@ -311,32 +333,17 @@ section {
     opacity: 0.45;
 } */
 
-#fan-page:hover {
-    background-image: url(../images/billy-joel.gif);
+#work-day-scheduler:hover {
+    background-image: url(../images/work-day-scheduler.gif);
     background-size: cover;
 }
 
-#fan-page:hover h3, p {
+#work-day-scheduler:hover a {
     text-decoration: none;
+    /*  * This works but it shrinks the card */
+    /* display: none; */
 }
 
-#run-buddy {
-    background-size: cover;
-    position: relative;
-    display: flex;
-}
-
-#run-buddy::before {
-    content: "";
-    background-size: cover;
-    background-image: url(../images/run-buddy.png);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0.45;
-}
 
 #project-3 {
     background-size: cover;
