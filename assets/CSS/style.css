@@ -345,40 +345,19 @@ section {
 }
 
 
-#project-3 {
-    background-size: cover;
-    position: relative;
-    display: flex;
+#band-site {
+    background: radial-gradient(#93a5cf, #e4efe9);
 }
 
-#project-3::before {
-    content: "";
+#band-site:hover {
+    background-image: url(../images/insomnia.png);
     background-size: cover;
-    background-image: url("https://via.placeholder.com/150");
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0.45;
 }
 
-#project-4 {
-    background-size: cover;
-    position: relative;
-    display: flex;
-}
-
-#project-4::before {
-    content: "";
-    background-size: cover;
-    background-image: url("https://via.placeholder.com/150");
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0.45;
+#band-site:hover a {
+    text-decoration: none;
+    /*  * This works but it shrinks the card */
+    /* display: none; */
 }
 
 .contact-info {
