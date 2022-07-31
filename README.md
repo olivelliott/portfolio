@@ -17,6 +17,9 @@
 
 A portfolio that highlights my recent work for a potential employer. 
 
-![My Website](./assets/images/screen-shot-portfolio.png/)
-[Link](https://olivelliott.github.io/module-1-challenge/)
+[Link to the Site](https://olivelliott.github.io/portfolio/)
+
+![My Portfolio](./assets/images/portfolio-screenshot.png)
+
+
 
